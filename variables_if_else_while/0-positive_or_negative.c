@@ -11,12 +11,14 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	if(n > 0\n);
-	printf(is positive);
+	printf(is posititve);
 
 	if(n == 0\n);
-	printf(0);
+	printf(is zero);
 
 	if(n < 0\n);
-	printf(0);
+	printf(is negative);
+
+	return(0);
 
 }
