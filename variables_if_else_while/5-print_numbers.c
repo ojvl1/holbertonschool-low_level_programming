@@ -7,11 +7,15 @@ int main(void)
 {
 	int x = 0;
 
-	while (x < 10)
+	for (x = 0; x < 10; x++)
 	{
 		printf("%d", x);
+		if (x < 9)
+		{
+			printf(", ");
+		}
 	}
-	x++;
 	printf("\n");
+
 	return (0);
 }
