@@ -5,16 +5,14 @@
 void print_alphabet_x10(void)
 {
 	int alpha;
-	char bet;
+	int bet;
 
-	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	for (alpha = 0; alpha <= 9; alpha++)
 	{
-		for (bet = '0'; bet <= '9'; bet++)
-		{
-		_putchar(alpha);
-		}
+	for (bet = 'a'; bet <= 'z'; bet++)
 
-		_putchar('\n');
+	_putchar(bet);
+	_putchar('\n');
 
 	}
 
