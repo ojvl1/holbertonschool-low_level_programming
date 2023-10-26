@@ -1,23 +1,27 @@
 #include "main.h"
 /**
- **_strcat - entry point
+ **_strcat - entiry point
  *@dest: will have the src string
  *@src: will append to dest string
  *Return: dest
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int i = 0;
+	int j = 0;
 
-	for (i = 0; dest[i] != '\0'; ++i)
-
-	for (j = 0; src[i] != '\0'; ++j, ++i)
+	while (dest[i] != '\0')
 	{
-		dest[i] = src[i];
+		i++;
 	}
 
-	dest[i] = '\0';
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+
+	dest[i + j] = '\0';
 
 	return (dest);
 }
