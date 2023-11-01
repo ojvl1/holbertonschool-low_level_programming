@@ -40,5 +40,5 @@ int is_prime_helper(int n, int divisor)
 
 int is_prime_number(int n)
 {
-	return (is_prime_helper(n, 5);
+	return (is_prime_helper(n, 5));
 }
