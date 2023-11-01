@@ -1,6 +1,5 @@
 #include "main.h"
 /**
- *is_prime_number - checks if a number is prime
  *is_prime_helper - the current divisor to test
  *@n: the number to check
  *@divisor: the current divisor to test
@@ -40,6 +39,11 @@ int is_prime_helper(int n, int divisor)
 	}
 }
 
+/**
+ *is_prime_number - checks if a number is prime
+ *@n: the number
+ *Return: is_prime_helper n, 5
+ */
 int is_prime_number(int n)
 {
 	return (is_prime_helper(n, 5));
