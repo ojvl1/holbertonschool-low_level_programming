@@ -1,12 +1,14 @@
 #include "main.h"
 /**
  *is_prime_number - checks if a number is prime
+ *is_prime_helper - the current divisor to test
  *@n: the number to check
  *@divisor: the current divisor to test
  *Return: 1 if n is prime, 0 otherwise
  */
 int is_prime_helper(int n, int divisor)
 {
+
 	if (n <= 1)
 	{
 		return (0);
@@ -34,7 +36,7 @@ int is_prime_helper(int n, int divisor)
 
 	else
 	{
-		return is_prime_helper(n, divisor + 6);
+		return (is_prime_helper(n, divisor + 6));
 	}
 }
 
