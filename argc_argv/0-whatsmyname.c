@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
  *main - function for printing its own funct name
