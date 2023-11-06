@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 /**
  *_strdup - function returns a pointer to a nem string
  *@str: the string that has to be copied
@@ -15,7 +16,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	prt = malloc(sizeof(str));
+	ptr = malloc(sizeof(str));
 
 	if (ptr == NULL)
 	{
