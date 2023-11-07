@@ -2,42 +2,35 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *alloc_grid - returns to a 2 dimensional array of integers
- *@width: size of second dimension
- *@height: size of first dimension
- *Return: ptr
+ *alloc_grid- fuction so store 2d array in pointer
+ *
+ *@width: size of dimension 1
+ *@height: size of dimension 2
+ *Return: pointer to 2d array
  */
 int **alloc_grid(int width, int height)
 {
-	int i;
-	int j;
 	int **ptr;
+	int i, j;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-
-	ptr = malloc(height * sizeof(int *));
+	ptr = (int **)malloc(height * sizeof(int *));
 	if (ptr == NULL)
 		return (NULL);
-
 	for (i = 0; i < height; i++)
 	{
-
-	ptr[i] = (int *)malloc(width * sizeof(int));
-
-	if (ptr[i] == NULL)
-	{
-		return (NULL);
-
-	for (j = 0; j < i; j++)
-	{
-		free(ptr[j]);
+		ptr[i] = (int *)malloc(width * sizeof(int));
+		if (ptr[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+			{
+				free(ptr[j]);
+			}
+			free(ptr);
+			return (NULL);
+		}
 	}
-		free(ptr);
-		return (NULL);
-	}
-	}
-
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
