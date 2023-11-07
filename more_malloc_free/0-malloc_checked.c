@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *
- *
- *
+ *malloc_checked - allocate using malloc
+ *@b: this was multiple with size of char
+ *Return: pointer to allocate memory
  */
 void *malloc_checked(unsigned int b)
 {
@@ -15,9 +15,9 @@ void *malloc_checked(unsigned int b)
 
 	ptr = malloc(sizeof(char) * b);
 
-	if(ptr == NULL)
+	if (ptr == NULL)
 		exit(98);
 
-	return(ptr);
+	return (ptr);
 
 }
