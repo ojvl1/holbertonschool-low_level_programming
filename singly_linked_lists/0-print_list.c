@@ -1,12 +1,12 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
-/*
- *print_list - print all the the
- *elements of a list_t list
- *@list_t: list of the elements
+/**
+ *print_list - print all the the elements of a list
+ *@h: pointer to the list_t list to print
  *Return: count
  */
+
 size_t print_list(const list_t *h)
 {
 	int count = 0;
