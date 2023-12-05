@@ -31,7 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(fp);
 		return (0);
 	}
-	rd = read(i, fp, letters);
+	rd = read(op, fp, letters);
 
 	fp[letters + 1] = '\0';
 
