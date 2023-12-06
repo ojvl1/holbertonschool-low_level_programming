@@ -5,14 +5,16 @@
  *@key: is the key (can't be an empty string
  *@value: the value associate with the key
  *
- *Return: 0, 1, -1, 0
+ *Return: -1, 0, 1, 0
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node, *tmp;
-	unsigned long int idx = 0;
+	unsigned long int idx;
+	unsigned long int size;
 
-	idx = (hash_djb2((const unsigned char *)key) % ht->size);
+	size = ht->size;
+	idx = (hash_djb2((const unsigned char *)key) % size);
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 	{
