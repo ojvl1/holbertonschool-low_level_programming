@@ -4,5 +4,7 @@
 #include <stdlib.h>
 /* Prototypes */
 int linear_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value);
+size_t rec_binary(int *arraym int left, int right, size_t size, int v);
 
 #endif /* SEARCH_ALGOS_H */
